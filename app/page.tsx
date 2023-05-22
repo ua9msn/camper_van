@@ -1,6 +1,6 @@
 import { Header } from './homepage/Header';
 import { Article } from '@/components/Article';
-import styles from './page.module.css';
+import styles from './page.module.scss';
 
 import bg from '@/media/img/155532.webp';
 
