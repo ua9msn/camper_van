@@ -6,11 +6,12 @@ const cx = cn.bind(styles);
 
 interface Props {
 	title: React.ReactNode;
+	children: React.ReactNode;
 	bgsrc: string;
 	isMirrored?: boolean;
 }
 
-export const Article: React.FC<Props> = ({ children, title, bgsrc, isMirrored = false }: Props) => {
+export const Article = ({ children, title, bgsrc, isMirrored = false }: Props) => {
 	return (
 		<article
 			className={cx({
@@ -18,11 +19,14 @@ export const Article: React.FC<Props> = ({ children, title, bgsrc, isMirrored = 
 				left: !isMirrored,
 			})}
 		>
-			<div className={styles.title}
-			     style={{
-				     backgroundImage:`url(${bgsrc})`,
-			     }}
-			>{title}</div>
+			<div
+				className={styles.title}
+				style={{
+					backgroundImage: `url(${bgsrc})`,
+				}}
+			>
+				{title}
+			</div>
 			<div className={styles.content}>{children}</div>
 		</article>
 	);
