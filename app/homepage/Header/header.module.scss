@@ -1,0 +1,38 @@
+@use 'app/media';
+
+.header {
+	width: 100%;
+	min-height: 400px;
+	background-image: url('https://placehold.co/600x400/777/444/png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-origin: border-box;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1em;
+
+	color: white;
+
+	.titleContainer {
+		max-width: 50%;
+	}
+
+	.title {
+		font-size: 4em;
+	}
+
+	.subTitle {
+		font-size: 2em;
+	}
+
+	@include media.for-phone-only {
+		font-size: 0.875rem;
+	}
+
+}
+
+.headerImage {
+	width: 100%;
+}
